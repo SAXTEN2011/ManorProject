@@ -6,6 +6,7 @@ let state = {
     currency: 1000,
     happiness: 10,
     _lost: false,
+    _age: 0,
 };
 
 

@@ -5,8 +5,10 @@ let gameClock = setInterval(function(){
             runEvent(selectRandomEvent());
         }
         drawState();
+
+        state._age += 1;
     }
-}, 7000);
+}, 8000);
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     drawState();

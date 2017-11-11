@@ -244,12 +244,13 @@ let conditionEvents = [
   new conditionEvent(
     "Older Age",
     function(){
-      if(state._age > 120){
+      if(state._age === 120){
         return true;
       }
     },
     function(){
       logger.red("You have succumbed to the ages. You have peacefully died of old age. Your manor has been transferred to your son.");
+      logger.log("Congratulations, your manor has lasted a lifetime - an achievement not frequently obtained.");
       game._lost = true;
     }
   )

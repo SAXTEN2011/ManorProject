@@ -1,0 +1,34 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    background-color: #01288c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: Georgia;
+    font-size: 1.15em;
+    text-align: center
+}
+
+#manor{
+    width: 60%;
+    height: auto;
+    /* margin-left: 25% */
+}
+
+.post{
+    margin-top: 3%;
+    width: 100%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.heading{
+    font-size: 2.5em
+}
+
+.loggerRed{
+    color: #bd0000
+}

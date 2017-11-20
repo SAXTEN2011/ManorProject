@@ -192,7 +192,7 @@ let conditionEvents = [
   new conditionEvent(
     "Coup",
     function() {
-      if (state.stability < 0) {
+      if (state.stability < 1) {
         return true;
       }
     },

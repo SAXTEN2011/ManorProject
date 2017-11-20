@@ -106,6 +106,21 @@ let events = [
   new event("Plagued Crops", function(){
     logger.log("The crops are diseased, and cannot be harvested. -300 food");
     state.food -= 300;
+  }),
+  new event("Game Balance", function(){
+    let foodAmt = Math.floor(Math.random() * state.food);
+    logger.log("A leak in your storehouse ruins some food. -" + foodAmt + " food");
+    state.food -= foodAmt;
+  }),
+  new event("Tax Man Cometh", function(){
+    let dollarAmt = Math.ceil(0.5 * state.currency);
+    logger.log("The tax man robs you. -" +  dollarAmt + " currency");
+    state.currency -= dollarAmt;
+  }),
+  new event("The Pastor", function(){
+    let minusStability = state.stability - 1;
+    logger.log("A pastor from afar teaches your serfs new ideals. -" + minusStability + " stability.");
+    state.stability -= minusStability;
   })
 ];
 
@@ -251,7 +266,7 @@ let conditionEvents = [
     function(){
       logger.red("You have succumbed to the ages. You have peacefully died of old age. Your manor has been transferred to your son.");
       logger.log("Congratulations, your manor has lasted a lifetime - an achievement not frequently obtained.");
-      game._lost = true;
+      state._lost = true;
     }
   )
 ];
